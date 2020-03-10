@@ -1,0 +1,38 @@
+.main{
+  width: 50%;
+  height: 100vh;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.searchBlock{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBlock input{
+  width: 300px;
+  /* height: 40px; */
+  /* padding: 20px; */
+}
+
+.searchBlock button{
+  width: 100px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.detailsBlock{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: rgb(0, 140, 255);
+  width: 100%;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10px 10px;
+  color: white;
+  font-size: 20px;
+}

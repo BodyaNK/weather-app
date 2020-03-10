@@ -1,0 +1,65 @@
+.wrapper_d{
+    width: 80%;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+}
+.oneday_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.firstRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    font-size: 20px;
+}
+.temp{
+    font-size: 40px;
+    margin: 0;
+    margin-left: 0;
+}
+.fells_temp{
+    margin: 0;
+}
+.pressure{
+    margin-top: 20px !important;
+}
+.pressure, .humidity, .speed{
+    margin: 0;
+}
+.showMore{
+    margin-top: 10px;
+    width: 130px;
+    height: 30px;
+    color: white;
+    border: none;
+    background-color: rgb(0, 98, 128);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.threedays_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5%;
+}
+.threedays_details .item{
+    width: 30%;
+    border-radius: 10px;
+    background: rgba(124, 124, 124, 0.377);
+}
+.item p{
+    font-size: 25px !important;
+    margin-left: 10px !important;
+}
