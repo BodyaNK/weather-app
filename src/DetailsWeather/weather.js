@@ -1,6 +1,6 @@
 import React from "react";
-import axios from "axios";
 import './weather.css';
+import {searchMore} from '../axiosFunctions.js';
 import Details from './details.js';
 
 class DetailsWeather extends React.Component{
@@ -50,23 +50,6 @@ class DetailsWeather extends React.Component{
         }
     }
 
-    searchMore = () => {
-        axios
-          .get("/data/2.5/forecast", {
-            params: { q: this.state.city }
-          })
-          .then(result => {
-            this.setState({ moreData: result.data, found: true}, () => {
-              console.log(this.state.moreData);
-            });
-          })
-          .catch(error => {
-            this.setState({found: false});
-            alert(error.response);
-          });
-      };
-
-
     render(){
         let date = new Date();
         let months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -93,7 +76,7 @@ class DetailsWeather extends React.Component{
                         <p className="speed">Wind, m/s: {this.state.wind_speed}</p>
                     </div>
                 </div>
-                <button className="showMore" onClick={() => { this.searchMore(); }}>Show for 3 days</button>
+                <button className="showMore" onClick={() => { searchMore(this); }}>Show for 3 days</button>
 
                 {this.state.found===true ? 
                     <Details details={this.state.moreData}/>
